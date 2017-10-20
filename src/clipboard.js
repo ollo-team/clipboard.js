@@ -35,7 +35,7 @@ class Clipboard extends Emitter {
      * @param {String|HTMLElement|HTMLCollection|NodeList} trigger
      */
     listenClick(trigger) {
-        this.listener = listen(trigger, 'click', (e) => this.onClick(e));
+        this.listener = listen(trigger, 'touchend', (e) => this.onClick(e));
     }
 
     /**
